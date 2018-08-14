@@ -26,6 +26,7 @@ gem 'faraday'
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 gem 'omniauth', '~> 1.6', '>= 1.6.1'
 gem 'omniauth-foursquare', '~> 1.0', '>= 1.0.1'
+gem 'pry'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
