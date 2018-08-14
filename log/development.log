@@ -1323,3 +1323,14 @@ Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 73.193.248.224 at 2018-08-14 16:54:49 +0000
 Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/friends" for 73.193.248.224 at 2018-08-14 16:59:56 +0000
+Cannot render console from 73.193.248.224! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SearchesController#friends as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant ApplicationController::FOURSQUARE_CLIENT_ID):
+  app/controllers/application_controller.rb:14:in `authenticate_user'
+
+
