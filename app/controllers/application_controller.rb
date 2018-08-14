@@ -3,4 +3,17 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  private
+
+      def logged_in?
+        !!session[:token]
+      end
+
+      def authenticate_user
+        client_id = ENV[FOURSQUARE_CLIENT_ID]
+        redirect_uri = CGI.escape('http://localhost:3000/auth')
+        Foursquare_url = "https://foursquare.com/oauth2/authenticate?client_id=#{client_id}&response_type=code&redirect_uri=#{redirect_uri}"
+        redirect_to Foursquare_url unless logged_in?
+      end
+
 end
